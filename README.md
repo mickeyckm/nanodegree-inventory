@@ -24,7 +24,7 @@ Inventory is an app which would allow a store to keep track of its inventory of 
 
 Screenshot | Caption
 ---------- | -----------
-![catelog](https://raw.github.com/mickeyckm/nanodegree-inventory/master/screenshots/catelog.jpg) | Catelog screen
+![catalog](https://raw.github.com/mickeyckm/nanodegree-inventory/master/screenshots/catalog.jpg) | Catalog screen
 ![editor](https://raw.github.com/mickeyckm/nanodegree-inventory/master/screenshots/editor.jpg) | Editor screen
 
 
