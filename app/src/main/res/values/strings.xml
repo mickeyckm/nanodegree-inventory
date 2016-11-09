@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Inventory</string>
+    <string name="empty_view_title_text">It\'s a bit lonely here...</string>
+    <string name="empty_view_subtitle_text">Get started by adding an asset</string>
+    <string name="ok">OK</string>
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="action_delete_all_entries">Delete All Entries</string>
+
+    <string name="field_image">Image:</string>
+    <string name="field_name">Name:</string>
+    <string name="field_qty">Quantity:</string>
+    <string name="field_qty_sold">Qty Sold:</string>
+    <string name="field_price">Price:</string>
+    <string name="field_supplier">Supplier:</string>
+    <string name="field_supplier_email">Email:</string>
+    <string name="field_supplier_phone">Phone:</string>
+
+    <string name="action_save">Save Asset</string>
+    <string name="action_delete">Delete Asset</string>
+
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="sale_for">Sale For</string>
+
+    <string name="editor_activity_title_new_asset">Add a Asset</string>
+    <string name="editor_activity_title_edit_asset">Edit Asset</string>
+
+    <string name="editor_delete_asset_successful">Asset deleted</string>
+    <string name="editor_delete_asset_failed">Error with deleting asset</string>
+    <string name="delete_dialog_msg">Delete this asset?</string>
+
+    <string name="editor_insert_asset_successful">Asset saved</string>
+    <string name="editor_insert_asset_failed">Error with saving asset</string>
+    <string name="editor_update_asset_successful">Asset updated</string>
+    <string name="editor_update_asset_failed">Error with updating asset</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+
+    <string name="sale_success">Item sold</string>
+    <string name="sale_failed">No item left for sale</string>
+</resources>
