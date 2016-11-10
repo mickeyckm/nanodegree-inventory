@@ -138,8 +138,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     public boolean onPrepareOptionsMenu(Menu menu) {
         super.onPrepareOptionsMenu(menu);
         if (mCurrentAssetUri == null) {
-            MenuItem menuItem = menu.findItem(R.id.action_delete);
-            menuItem.setVisible(false);
+            MenuItem orderMenuItem = menu.findItem(R.id.action_order);
+            orderMenuItem.setVisible(false);
+            MenuItem deleteMenuItem = menu.findItem(R.id.action_delete);
+            deleteMenuItem.setVisible(false);
         }
         return true;
     }
@@ -151,7 +153,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             // Respond to a click on the "Save" menu option
             case R.id.action_save:
                 saveAsset();
-                finish();
                 return true;
             // Respond to a click on the "Save" menu option
             case R.id.action_order:
@@ -317,9 +318,22 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         String nameString = mNameEditText.getText().toString().trim();
         String quantityString = mQuantityText.getText().toString().trim();
         String priceString = mPriceEditText.getText().toString().trim();
-        Bitmap imageBitmap = ((BitmapDrawable)mImageView.getDrawable()).getBitmap();
+        Bitmap imageBitmap = null;
 
-        if (mCurrentAssetUri == null && TextUtils.isEmpty(nameString) && TextUtils.isEmpty(priceString)) {
+        if (mImageView.getDrawable() != null) {
+            imageBitmap = ((BitmapDrawable) mImageView.getDrawable()).getBitmap();
+        }
+
+        if (mCurrentAssetUri == null && (TextUtils.isEmpty(nameString) ||  TextUtils.isEmpty(priceString) || imageBitmap == null)) {
+            if (TextUtils.isEmpty(nameString) ) {
+                Toast.makeText(this, getString(R.string.edit_name_blank), Toast.LENGTH_SHORT).show();
+            }
+            else if (TextUtils.isEmpty(priceString) ) {
+                Toast.makeText(this, getString(R.string.edit_price_blank), Toast.LENGTH_SHORT).show();
+            }
+            else if (imageBitmap == null ) {
+                Toast.makeText(this, getString(R.string.edit_image_blank), Toast.LENGTH_SHORT).show();
+            }
             return;
         }
 
@@ -357,6 +371,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             }
         }
 
+        finish();
     }
 
     private void deleteAsset() {
