@@ -17,6 +17,7 @@
 
     <string name="action_save">Save Asset</string>
     <string name="action_delete">Delete Asset</string>
+    <string name="action_order">Order More</string>
 
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
@@ -40,4 +41,8 @@
 
     <string name="sale_success">Item sold</string>
     <string name="sale_failed">No item left for sale</string>
+
+    <string name="supplier_subject">Placing order for </string>
+    <string name="supplier_body_one">Hi,\n\nI would like to place an order for</string>
+    <string name="supplier_body_two">.\n\nThank you.\n\n</string>
 </resources>

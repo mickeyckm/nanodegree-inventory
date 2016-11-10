@@ -153,6 +153,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 saveAsset();
                 finish();
                 return true;
+            // Respond to a click on the "Save" menu option
+            case R.id.action_order:
+                orderAsset();
+                return true;
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:
                 // Pop up confirmation dialog for deletion
@@ -373,5 +377,16 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         // Close the activity
         finish();
+    }
+
+    private void orderAsset() {
+        if (mCurrentAssetUri != null) {
+            String assetName = mNameEditText.getText().toString();
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto","supplier@inventory.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.supplier_subject) + assetName);
+            emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.supplier_body_one) + assetName + getString(R.string.supplier_body_two));
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
+        }
     }
 }
