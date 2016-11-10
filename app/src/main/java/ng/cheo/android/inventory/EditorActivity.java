@@ -119,8 +119,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                // Log.d(TAG, String.valueOf(bitmap));
-
                 mImageView.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
