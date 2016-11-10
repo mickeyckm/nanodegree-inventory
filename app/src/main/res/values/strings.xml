@@ -22,7 +22,7 @@
     <string name="cancel">Cancel</string>
     <string name="sale_for">Sale For</string>
 
-    <string name="editor_activity_title_new_asset">Add a Asset</string>
+    <string name="editor_activity_title_new_asset">Add an Asset</string>
     <string name="editor_activity_title_edit_asset">Edit Asset</string>
 
     <string name="editor_delete_asset_successful">Asset deleted</string>
