@@ -29,7 +29,7 @@
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:scaleType="centerCrop"
-                android:background="#999999"/>
+                android:background="@color/colorImageBackground"/>
 
             <Button
                 android:id="@+id/import_image"
